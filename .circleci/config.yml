@@ -11,4 +11,4 @@ jobs:
           command: npm install
       - run:
           name: 'Push to UXPin'
-          command: ./node_modules/@uxpin/merge-cli/bin/uxpin-merge push --webpack-config ./webpack.config.uxpin.js --wrapper ./tools/UXPinWrapper.js
+          command: node --max-old-space-size=4096 ./node_modules/.bin/uxpin-merge push --webpack-config ./webpack.config.uxpin.js --wrapper ./tools/UXPinWrapper.js --token 46ee77f72f2f9f221185e790e8e65cce97fcc0d6
